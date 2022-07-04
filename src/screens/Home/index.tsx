@@ -1,8 +1,9 @@
+import { Button } from '@app/components';
+import { navigationService } from '@app/services';
+import { Text, Box } from '@app/theme';
 import React from 'react';
 
-import { Button } from '../../components';
-import { navigationService } from '../../services';
-import { Text, Box } from '../../theme';
+const screens = ['PanGesture', 'Skia'];
 
 const Home = () => (
   <>
@@ -17,11 +18,13 @@ const Home = () => (
         <Text textAlign="center">Welcome!</Text>
       </Box>
     </Box>
-    <Button
-      label="Skia"
-      onPress={() => navigationService.navigate('Skia')}
-      primary
-    />
+    {screens.map((screen) => (
+      <Button
+        label={screen}
+        onPress={() => navigationService.navigate(screen)}
+        primary
+      />
+    ))}
   </>
 );
 

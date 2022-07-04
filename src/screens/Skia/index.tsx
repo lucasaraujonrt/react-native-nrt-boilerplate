@@ -1,3 +1,4 @@
+import { useTheme } from '@app/theme';
 import {
   Canvas,
   useValue,
@@ -9,6 +10,7 @@ import React from 'react';
 const Skia = () => {
   const cx = useValue(100);
   const cy = useValue(100);
+  const {} = useTheme();
 
   const touchHandler = useTouchHandler({
     onActive: ({ x, y }) => {
@@ -19,7 +21,7 @@ const Skia = () => {
 
   return (
     <Canvas style={{ flex: 1 }} onTouch={touchHandler}>
-      <Circle cx={cx} cy={cy} r={10} color="red" />
+      <Circle cx={cx} cy={cy} r={100} color="red" />
     </Canvas>
   );
 };

@@ -1,7 +1,6 @@
+import { Button as ThemedButton, Text, useTheme } from '@app/theme';
 import * as React from 'react';
 import { SafeAreaView, StyleSheet, View } from 'react-native';
-
-import { Button as ThemedButton, Text, useTheme } from '../../theme';
 
 interface ButtonProps {
   label: string;
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
 const Button = ({ label, primary, onPress }: ButtonProps) => {
   const color = primary ? 'white' : undefined;
   const { colors } = useTheme();
-  const backgroundColor = primary ? colors.drawer3 : undefined;
+  const backgroundColor = primary ? colors.danger : undefined;
 
   return (
     <ThemedButton activeOpacity={0.7} {...{ onPress }} borderRadius="xl">

@@ -32,14 +32,6 @@ const theme = {
     edit: palette.lightBlue,
     text: 'rgba(12, 13, 52, 0.7)',
     textContrast: palette.white,
-    background: palette.white,
-    background2: '#F6F6F6',
-    graph1: palette.orange,
-    graph2: palette.yellow,
-    drawer1: palette.orange,
-    drawer2: palette.yellow,
-    drawer3: palette.pink,
-    drawer4: palette.violet,
   },
   spacing: {
     s: 8,
@@ -60,39 +52,22 @@ const theme = {
     xl: 24,
   },
   textVariants: {
-    hero: {
-      fontSize: 80,
-      lineHeight: 80,
-      color: 'danger',
-      textAlign: 'center',
+    header: {
+      fontWeight: 'bold',
+      fontSize: 34,
+      lineHeight: 42.5,
+      color: 'black',
     },
-    title1: {
+    subheader: {
+      fontWeight: '600',
       fontSize: 28,
-      color: 'secondary',
-    },
-    title2: {
-      fontSize: 24,
-      lineHeight: 30,
-      color: 'secondary',
-    },
-    title3: {
-      fontSize: 16,
-      color: 'secondary',
+      lineHeight: 36,
+      color: 'black',
     },
     body: {
       fontSize: 16,
       lineHeight: 24,
-      color: 'text',
-    },
-    button: {
-      fontSize: 15,
-      color: 'text',
-      textAlign: 'center',
-    },
-    header: {
-      fontSize: 12,
-      lineHeight: 24,
-      color: 'secondary',
+      color: 'black',
     },
   },
   breakpoints: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-import { Home, Skia } from '../screens';
+import { Home, Skia, PanGesture } from '../screens';
 import { createStack } from '../services/navigation';
 
 const MainStack = createStack();
@@ -31,6 +31,7 @@ const ScreensNavigator = () => (
   <StartStack.Navigator screenOptions={{ headerShown: false }}>
     <StartStack.Screen name="Home" component={Home} />
     <StartStack.Screen name="Skia" component={Skia} />
+    <StartStack.Screen name="PanGesture" component={PanGesture} />
   </StartStack.Navigator>
 );
 
