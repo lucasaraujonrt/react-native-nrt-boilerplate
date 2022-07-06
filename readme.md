@@ -12,7 +12,7 @@ I believe this is not the best project to start a "real production project", bec
 
 I hope this project can help you to improve our skills in something you never did in react-native (ex: react-native-skia)
 
-# 📚 Libs
+# 📚 Libraries
 
 ## Style
 
@@ -31,13 +31,46 @@ I hope this project can help you to improve our skills in something you never di
 - [react-navigation/native](https://reactnavigation.org/)
 - [react-navigation/stack](https://reactnavigation.org/)
 
-# 👨‍💻 Installing
+# 👨‍💻 How to use
 
-Install with yarn/npm
+## 1️⃣ Step one
+
+Creating a new application
 
 ```sh
-  npm i
-  yarn
+npx react-native init MyNewPoc --template react-native-boilerplate-nrt
+```
+
+## 2️⃣ Step two
+
+### Renaming your application
+
+First, Switch to new branch (optional but recommended).
+
+```bash
+git checkout -b rename-app
+```
+
+### Rename
+
+```sh
+npx react-native-rename <newName> -b <bundleIdentifier>
+```
+
+## 3️⃣ Step three
+
+Renaming your application
+
+```sh
+  npx react-native-rename <newName> -b <bundleIdentifier>
+```
+
+## 4️⃣ Step four
+
+### Setup environment
+
+```sh
+  yarn run pods setup
 ```
 
 # 🔗 Links

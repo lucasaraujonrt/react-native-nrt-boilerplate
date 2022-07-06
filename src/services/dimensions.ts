@@ -1,10 +1,10 @@
 import { Dimensions, Platform, PixelRatio } from 'react-native';
 
-export const winWidth = Dimensions.get('window').width;
-export const winHeight = Dimensions.get('window').height;
-export const winFont = Dimensions.get('window').fontScale;
-export const { width: SCREEN_WIDTH, height: SCREEN_HEIGHT } =
-  Dimensions.get('window');
+export const {
+  width: SCREEN_WIDTH,
+  height: SCREEN_HEIGHT,
+  fontScale: SCREEN_FONT,
+} = Dimensions.get('window');
 
 const wscale: number = SCREEN_WIDTH / 375;
 const hscale: number = SCREEN_HEIGHT / 667;
@@ -12,9 +12,9 @@ const hscale: number = SCREEN_HEIGHT / 667;
 const guidelineBaseWidth = 350;
 
 const Responsive = {
-  widthScale: (percentage: number) => winWidth * percentage,
-  heightScale: (percentage: number) => winHeight * percentage,
-  fontScale: (size: number) => size * (winWidth / guidelineBaseWidth),
+  widthScale: (percentage: number) => SCREEN_WIDTH * percentage,
+  heightScale: (percentage: number) => SCREEN_HEIGHT * percentage,
+  fontScale: (size: number) => size * (SCREEN_WIDTH / guidelineBaseWidth),
   normalize:
     () =>
     (size: number, based: 'width' | 'height' = 'width') => {
