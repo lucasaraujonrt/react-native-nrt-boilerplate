@@ -43,7 +43,7 @@ npx react-native init MyNewPoc --template react-native-boilerplate-nrt
 
 ## 2️⃣ Step two
 
-### Renaming your application
+### Switch branch
 
 First, Switch to new branch (optional but recommended).
 
@@ -51,15 +51,9 @@ First, Switch to new branch (optional but recommended).
 git checkout -b rename-app
 ```
 
-### Rename
-
-```sh
-npx react-native-rename <newName> -b <bundleIdentifier>
-```
-
 ## 3️⃣ Step three
 
-Renaming your application
+### Renaming your application
 
 ```sh
   npx react-native-rename <newName> -b <bundleIdentifier>
