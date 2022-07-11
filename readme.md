@@ -33,6 +33,10 @@ I hope this project can help you to improve our skills in something you never di
 
 # 👨‍💻 How to use
 
+## Coming soon in npm and cmd react-native init
+
+<!-- # 👨‍💻 How to use
+
 ## 1️⃣ Step one
 
 Creating a new application
@@ -65,7 +69,7 @@ git checkout -b rename-app
 
 ```sh
   yarn run pods setup
-```
+``` -->
 
 # 🔗 Links
 
