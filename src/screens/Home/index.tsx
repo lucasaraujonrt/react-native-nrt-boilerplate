@@ -4,10 +4,10 @@ import { navigationService } from '@app/services';
 import { Text, Box } from '@app/theme';
 import React from 'react';
 
-const screens = ['PanGesture', 'Skia'];
+const screens = ['PanGesture', 'Skia', 'Graph'];
 
 const Home = () => {
-  const { location, startTrack, stopTrack } = useTrackLocation(500);
+  const { location, startTrack, stopTrack } = useTrackLocation();
 
   return (
     <>

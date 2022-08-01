@@ -51,7 +51,6 @@ const useTrackLocation = (time: number = 1000) => {
           });
         },
         (error) => {
-          // See error code charts below.
           console.log(error.code, error.message);
         },
         { enableHighAccuracy: true }
