@@ -1,4 +1,4 @@
-import { Box, Text } from '@app/theme';
+import { Box, Text, useTheme } from '@app/theme';
 import {
   Canvas,
   Line,
@@ -12,10 +12,18 @@ import {
 } from '@shopify/react-native-skia';
 import { scaleLinear, scaleTime, line, curveBasis } from 'd3';
 import React from 'react';
-import { TouchableOpacity } from 'react-native';
+import { TouchableOpacity, Dimensions } from 'react-native';
 import { Easing } from 'react-native-reanimated';
 
-import { animatedData, DataPoint, originalData } from './data';
+import {
+  animatedData,
+  animatedData2,
+  animatedData3,
+  DataPoint,
+  originalData,
+} from './data';
+
+const { width } = Dimensions.get('window');
 
 interface GraphData {
   min: number;
@@ -23,9 +31,10 @@ interface GraphData {
   curve: SkPath;
 }
 const HEIGHT = 400;
-const WIDTH = 370;
+const WIDTH = width;
 
 const Graph = () => {
+  const { colors } = useTheme();
   const isTransitionCompleted = useValue(1);
   const transitionState = useValue({
     currentChart: 0,
@@ -69,7 +78,12 @@ const Graph = () => {
     };
   };
 
-  const graph = [buildGraphData(originalData), buildGraphData(animatedData)];
+  const graph = [
+    buildGraphData(originalData),
+    buildGraphData(animatedData),
+    buildGraphData(animatedData3),
+    buildGraphData(animatedData2),
+  ];
 
   const currentPath = useComputedValue(() => {
     const start = graph[transitionState.current.currentChart].curve;
@@ -104,9 +118,18 @@ const Graph = () => {
         {lines.map((_line) => (
           <Line strokeWidth={1} color="lightGray" p1={_line.p1} p2={_line.p2} />
         ))}
-        <Path path={currentPath} color="pink" strokeWidth={4} style="stroke" />
+        <Path
+          path={currentPath}
+          color={colors.danger}
+          strokeWidth={4}
+          style="stroke"
+        />
       </Canvas>
-      <Box flexDirection="row" justifyContent="center">
+      <Box
+        flexDirection="row"
+        justifyContent="space-around"
+        alignItems="center"
+      >
         <TouchableOpacity onPress={() => transition(1)}>
           <Box padding="l" backgroundColor="danger" borderRadius="l">
             <Text color="primaryLight" fontWeight="700">
@@ -118,6 +141,20 @@ const Graph = () => {
           <Box padding="l" backgroundColor="danger" borderRadius="l">
             <Text color="primaryLight" fontWeight="700">
               Two
+            </Text>
+          </Box>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => transition(2)}>
+          <Box padding="l" backgroundColor="danger" borderRadius="l">
+            <Text color="primaryLight" fontWeight="700">
+              Three
+            </Text>
+          </Box>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => transition(3)}>
+          <Box padding="l" backgroundColor="danger" borderRadius="l">
+            <Text color="primaryLight" fontWeight="700">
+              Four
             </Text>
           </Box>
         </TouchableOpacity>
