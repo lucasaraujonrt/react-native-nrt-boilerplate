@@ -44,15 +44,15 @@ const Graph = () => {
   const lines = [
     {
       p1: vec(10, 130),
-      p2: vec(400, 130),
+      p2: vec(WIDTH, 130),
     },
     {
       p1: vec(10, 250),
-      p2: vec(400, 250),
+      p2: vec(WIDTH, 250),
     },
     {
       p1: vec(10, 370),
-      p2: vec(400, 370),
+      p2: vec(WIDTH, 370),
     },
   ];
 
@@ -81,8 +81,8 @@ const Graph = () => {
   const graph = [
     buildGraphData(originalData),
     buildGraphData(animatedData),
-    buildGraphData(animatedData3),
     buildGraphData(animatedData2),
+    buildGraphData(animatedData3),
   ];
 
   const currentPath = useComputedValue(() => {
