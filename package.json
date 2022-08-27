@@ -16,7 +16,6 @@
   "dependencies": {
     "@react-navigation/native": "^6.0.10",
     "@react-navigation/stack": "^6.2.1",
-    "@shopify/flash-list": "^1.0.2",
     "@shopify/react-native-skia": "^0.1.134",
     "@shopify/restyle": "^1.2.0",
     "d3": "^7.6.1",

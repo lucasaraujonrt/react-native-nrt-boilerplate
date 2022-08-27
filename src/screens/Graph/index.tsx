@@ -59,7 +59,7 @@ const Graph = () => {
   const buildGraphData = (data: DataPoint[]): GraphData => {
     const min = Math.min(...data.map((point) => point.value));
     const max = Math.max(...data.map((point) => point.value));
-    const getYAxis = scaleLinear().domain([3, max]).range([HEIGHT, 35]);
+    const getYAxis = scaleLinear().domain([4, max]).range([HEIGHT, 35]);
     const getXAxis = scaleTime()
       .domain([new Date(2000, 1, 1), new Date(2000, 1, 15)])
       .range([10, WIDTH - 10]);
@@ -89,6 +89,10 @@ const Graph = () => {
     const start = graph[transitionState.current.currentChart].curve;
     const end = graph[transitionState.current.nextChart].curve;
     const result = start.interpolate(end, isTransitionCompleted.current);
+
+    console.log('start', start);
+    console.log('end', end);
+    console.log('result', result);
 
     return result?.toSVGString() ?? '';
   }, [transitionState, isTransitionCompleted]);

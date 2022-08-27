@@ -28,9 +28,13 @@ const ContentNavigator = () => (
 );
 
 const ScreensNavigator = () => (
-  <StartStack.Navigator screenOptions={{ headerShown: false }}>
+  <StartStack.Navigator screenOptions={{ headerShown: true }}>
     <StartStack.Screen name="Home" component={Home} />
-    <StartStack.Screen name="Skia" component={Skia} />
+    <StartStack.Screen
+      name="Skia"
+      component={Skia}
+      options={{ gestureEnabled: false }}
+    />
     <StartStack.Screen name="Graph" component={Graph} />
     <StartStack.Screen name="PanGesture" component={PanGesture} />
   </StartStack.Navigator>

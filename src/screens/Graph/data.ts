@@ -4,7 +4,7 @@ export type DataPoint = {
 };
 
 export const originalData: DataPoint[] = [
-  { date: '2000-02-01T05:00:00.000Z', value: 250 },
+  { date: '2000-02-01T05:00:00.000Z', value: 1000 },
   { date: '2000-02-02T05:00:00.000Z', value: 300.35 },
   { date: '2000-02-03T05:00:00.000Z', value: 150.84 },
   { date: '2000-02-04T05:00:00.000Z', value: 500.92 },
